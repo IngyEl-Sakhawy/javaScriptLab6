@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input, button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+
+class Shape {
+  constructor(name, sides, length) {
+    this.name = name;
+    this.sides = sides;
+    this.lenght = length;
+  }
+
+  calPer() {
+    const perm = this.sides * this.lenght;
+    console.log(`The perimeter of the `+this.name+` is: `+perm);
+  }
+}
+
+const square = new Shape('square', 4, 5);
+square.calPer();
+
+const triangle = new Shape('triangle', 3, 3);
+triangle.calPer();
+
+class Square extends Shape {
+  constructor(lenght) {
+   
+    super('square', 4, lenght);
+  }
+
+  calcArea() {
+    const area = this.lenght ** 2;
+    console.log(`The area of the square is: `+area);
+  }
+}
+
+const squrt = new Square(5);
+squrt.calPer();
+squrt.calcArea();
+
+
+</script>
+
+</body>
+</html>

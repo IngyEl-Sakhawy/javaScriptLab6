@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        input, button {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+ class Shape {
+  constructor(name, sides, length) {
+    this.name = name;
+    this.sides = sides;
+    this.lenght = length;
+  }
+
+  calPer() {
+    const perimeter = this.sides * this.lenght;
+    console.log(`The perimeter of the`+this.name+`is:` + perimeter);
+  }
+}
+
+
+const square = new Shape('square', 4, 5);
+square.calPer(); 
+
+
+const triangle = new Shape('triangle', 3, 3);
+triangle.calPer(); 
+
+</script>
+
+</body>
+</html>
